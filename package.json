@@ -1,0 +1,23 @@
+{
+  "name": "CA2InteractiveWebApplications",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardfc90/CA2InteractiveWebApplications.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardfc90/CA2InteractiveWebApplications/issues"
+  },
+  "homepage": "https://github.com/eduardfc90/CA2InteractiveWebApplications#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
