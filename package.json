@@ -1,7 +1,7 @@
 {
-  "name": "CA2InteractiveWebApplications",
+  "name": "ca2interactivewebapplications",
   "version": "1.0.0",
-  "description": "",
+  "description": "Eduard Fernando Cuadros 2017329",
   "main": "index.js",
   "scripts": {
     "start": "nodemon src/index.js"
