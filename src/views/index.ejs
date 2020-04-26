@@ -1,17 +1,32 @@
 <!DOCTYPE html>
+
+		<div class="container">	<a class="navbar-brand" href="#">ZARA SHOPPING ONLINE</a>
+			
 <html lang="en">
 
+
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>ZARA.COM</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/litera/bootstrap.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    
+	
 </head>
 
-<body>
 
+<body>
+<div class="row">
+			<div class="col-lg-12 text-left">
+            	<!-- main message -->
+				<h1 class="mt-5">Welcome to Zara</h1>
+			
+			</div>
+	
 	<div class="container p-5">
+    
 		<div class="row">
 			<div class="col-md-4 offset-md-4">
 				<form action="/create" method="POST" class="card card-body">
@@ -22,19 +37,46 @@
 						<input type="text" name="description" placeholder="Price" class="form-control">
                     </div>
                     <button class="btn btn-primary">
-                        Add
+                        Add Items
                     </button>
 				</form>
 
-                <% tasks.forEach(function (task) { %>
-                    <div class="card card-body mt-2">
-                        <h5><%= task.task %></h5>
-                        <p><%= task.description %></p>
-                    </div>
-                <% }) %>
+               
 			</div>
 		</div>
 	</div>
+        <!-- LIST -->
+    <div class="col-md-7">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Reference Number</th>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var i=0; i < tasks.length; i++) { %>
+            <tr>
+              <td><%= i + 1%></td>
+              <td><strong><%= tasks[i].task %></strong></td>
+              <td><%= tasks[i].description %></td>
+              <td>
+             
+                <a href="/delete/<%= tasks[i]._id %>"
+                  class="btn btn-danger">
+                  Delete
+                </a>
+                
+              </td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
 
 </body>
 
