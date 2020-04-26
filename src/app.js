@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const Task = require('./model/Task');
+const Task = require('./model/task');
 
 // settings
 app.set('views', __dirname + '/views');
