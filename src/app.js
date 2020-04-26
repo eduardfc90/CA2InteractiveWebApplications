@@ -26,7 +26,7 @@ app.post('/create', async (req, res) => {
     res.redirect('/');
     
 })
-
+// deleting items
 app.get('/delete/:id', async (req, res, next) => {
   let { id } = req.params;
   await Task.remove({_id: id});
