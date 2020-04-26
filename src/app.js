@@ -24,7 +24,14 @@ app.post('/create', async (req, res) => {
     });
     await newTask.save();
     res.redirect('/');
+    
 })
+
+app.get('/delete/:id', async (req, res, next) => {
+  let { id } = req.params;
+  await Task.remove({_id: id});
+  res.redirect('/');
+});
 
 // STATIC Files
 app.use(express.static(__dirname + '/public'));
